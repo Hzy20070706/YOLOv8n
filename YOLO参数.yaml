@@ -1,0 +1,25 @@
+# ========== 配置说明：修改后重启程序生效 ==========
+# 1. 运行设备
+device: cuda          # cuda=GPU，cpu=CPU（自动识别可留空）
+gpu_mem_clear: True   # 清理GPU显存（避免溢出）：True/False
+
+# 2. 屏幕与窗口
+screen_w: 2560        # 屏幕宽度（按实际分辨率改）
+screen_h: 1600        # 屏幕高度
+win_left: 853         # 窗口左上角X坐标
+win_top: 533          # 窗口左上角Y坐标
+win_w: 1280            # 窗口宽度
+win_h: 720            # 窗口高度
+win_name: YOLO_CS2  # 窗口标题
+model_size: 640       # 模型输入尺寸（320/480/640，越小越快）
+
+# 3. 检测参数
+target_classes: [0, 1]# 检测类别：[0]=头部，[1]=身体，[0,1]=两者都检测
+conf: 0.1             # 置信度阈值（0.1-0.9，越高越严格）
+iou: 0.4              # 重复框合并阈值（0.1-0.9，越低合并越多）
+line_width: 1         # 检测框线宽（1-3）
+
+# 4. 帧率显示
+show_fps: True        # 显示帧率：True/False
+fps_pos: [10, 25]     # 帧率显示位置（X,Y）
+fps_color: [0, 255, 0]# 帧率颜色（B,G,R，默认绿色）
